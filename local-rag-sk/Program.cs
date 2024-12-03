@@ -87,7 +87,8 @@ internal class Program
                 promptTemplate: @"{{$input}}",
                 arguments: new KernelArguments(openAIPromptExecutionSettings)
                 {
-            { "input", question }
+                    { "input", question },
+                    { "collection", collectionName }
                 });
 
             Console.ForegroundColor = ConsoleColor.Green;
